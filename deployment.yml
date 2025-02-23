@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: myweb1
+  name: myweb1
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: myweb1
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: myweb1
+    spec:
+      containers:
+      - image: vimal13/lw:v2
+        name: lw
+        resources: {}
+status: {}
